@@ -32,7 +32,7 @@ namespace NBitcoin
 				.BuildTransaction(true);
 
 			Console.WriteLine(tx);
-            Console.WriteLine(builder.Verify(tx));
+                        Console.WriteLine(builder.Verify(tx));
 
 			var client = new QBitNinjaClient(Network.TestNet);
 			BroadcastResponse broadcastResponse = client.Broadcast(tx).Result;
