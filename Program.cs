@@ -5,17 +5,18 @@ using NBitcoin.OpenAsset;
 using QBitNinja.Client;
 using QBitNinja.Client.Models;
 
-namespace NBitcoin
+namespace NBitcoinFirst
 {
     class Program
     {
         static void Main(string[] args)
         {
 			var coin = new Coin(
-	        fromTxHash: new uint256("c8271ba7118308d6b3205475048d103887fe797b63393ebc1f7910abb9907d29"),
-	        fromOutputIndex: 1,
-	        amount: Money.Satoshis(12998727),
-	        scriptPubKey: new Script(Encoders.Hex.DecodeData("76a914879d64086263c36d8bc1739471786b440e4e8b7488ac")));
+				fromTxHash: new uint256("c8271ba7118308d6b3205475048d103887fe797b63393ebc1f7910abb9907d29"),
+				fromOutputIndex: 1,
+				amount: Money.Satoshis(12998727),
+				scriptPubKey: new Script(Encoders.Hex.DecodeData("76a914879d64086263c36d8bc1739471786b440e4e8b7488ac"))
+			);
 
 			var issuance = new IssuanceCoin(coin);
 
